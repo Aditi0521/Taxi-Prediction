@@ -1,4 +1,5 @@
-﻿absl-py==1.2.0
+--only-binary :all:
+absl-py==1.2.0
 altair==4.2.0
 astunparse==1.6.3
 attrs==22.1.0
