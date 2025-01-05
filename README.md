@@ -1,27 +1,78 @@
-The Manhattan Taxi Demand Prediction system is implemented as a comprehensive web application using Streamlit, incorporating multiple machine learning models and interactive visualization components. The system architecture consists of several key components:
+# 🚕 Manhattan Taxi Demand Prediction 
+A sophisticated forecasting system for predicting taxi demand across Manhattan using a hybrid approach combining machine learning and deep neural networks. The system uses a CNN-LSTM Encoder-Decoder model for Manhattan's top 5 locations and a Stacked Machine Learning model for remaining locations.
 
-1. Model Architecture:
-Primary Prediction Models:
-CNN-LSTM Encoder-Decoder for deep learning predictions
-Machine Learning model (Gradient Boosting) for traditional feature-based predictions
-Hybrid approach combining both models for improved accuracy
+## 📑 Table of Contents
+* [Overview](#overview)
+* [Features](#features)
+* [Data Sources](#data-sources)
+* [Architecture](#architecture)
+* [Models](#models)
+* [Usage](#usage)
+* [Results](#results)
+* [Technologies Used](#technologies-used)
 
-2. Data Processing Pipeline:
-Weather data integration (temperature, precipitation, humidity, wind speed)
-Temporal feature engineering (hour, day, month, holidays)
-Location-based feature processing
-Real-time data normalization and scaling
+## 🎯 Overview
+This project develops a comprehensive taxi demand forecasting system for Manhattan, leveraging historical trip data from 2020-2022. The system combines advanced deep learning techniques with traditional machine learning approaches to provide accurate predictions for different areas of Manhattan.
 
-3. Frontend Implementation:
-Interactive dashboard with real-time updates
-Geospatial visualization using Folium
-Dynamic charts and graphs using Plotly and Altair
-Responsive design with custom CSS styling.
-Zoom feature for heatmaps
+## ⭐ Features
+- 🔄 Real-time demand prediction visualization
+- 🗺️ Interactive heatmap of Manhattan zones
+- 📊 Hourly and daily demand pattern analysis
+- ⛈️ Weather impact analysis 
+- 🎊 Holiday and weekend demand patterns
+- 📍 Top locations analysis
+- 📱 Detailed analytics dashboard
 
+## 📚 Data Sources
+- 🚖 Taxi trip records from [NYC TLC](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) (2020-2022)
+- 🌤️ Weather data from [Visual Crossing](https://www.visualcrossing.com/)
+- 🗽 NYC taxi zone information
+- 🎉 US holiday data
 
-Here are some tips to enhance your experience:
-- 💡 **Check the 'Best Times Today' section** for quieter travel periods.
-- 🌧️ **Weather conditions** can affect taxi availability.
-- 🕐 **Early morning hours** typically have shorter wait times.
-- 📍 **Popular areas** may have longer wait times during peak hours.
+## 🏗️ Architecture
+The system uses a hybrid architecture:
+- 🧠 CNN-LSTM Encoder-Decoder: For top 5 Manhattan locations
+- 📚 Stacked Machine Learning Model: For remaining locations 
+- ☁️ AWS EMR Spark Cluster: For data processing
+- 💻 Streamlit: For web application interface
+
+## 🤖 Models
+### CNN-LSTM Encoder-Decoder
+- 📈 Performance Metrics:
+  - R-Square: 95.6%
+  - Mean Square Error: 839.1
+  - Mean Absolute Error: 19.56
+  - Root Mean Square Error: 28.96
+
+### Stacked Model
+- 📊 Performance Metrics:
+  - R-Square: 96.72%
+  - Mean Square Error: 125.51
+  - Mean Absolute Error: 5.82
+  - Root Mean Square Error: 11.2
+
+## 🎮 Usage
+- 📊 Dashboard View
+  - View real-time demand predictions
+  - Analyze demand patterns through interactive maps
+  - Monitor key metrics and trends
+- 📈 Detailed Analysis
+  - Explore time series analysis
+  - Compare demand across locations
+  - Analyze weather impact
+
+## 🎯 Results
+- ✅ Successfully predicted taxi demand with over 96% accuracy
+- 🔍 Identified key patterns in demand based on:
+  - ⏰ Time of day
+  - 🌦️ Weather conditions
+  - 🎉 Special events
+  - 📍 Location characteristics
+
+## 🛠️ Technologies Used
+  - 🐍 Python
+  - 🧠 TensorFlow
+  - 📊 Scikit-learn
+  - 🌐 Streamlit
+  - ⚡ PySpark
+  - ☁️ Google Cloud Platform
